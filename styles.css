@@ -1,0 +1,78 @@
+body{
+    padding: 0; 
+    margin: 0;
+    background-image: linear-gradient(-225deg, rgba(248, 194, 201, 0.932) 0%, rgba(197, 193, 255, 0.911) 56%, rgba(148, 245, 243, 0.897) 100%),url(https://st.depositphotos.com/1501832/4834/v/950/depositphotos_48348551-stock-illustration-cartoon-seamless-bicolor-cats.jpg);
+
+}
+
+.calculadora-grilla{
+    
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.calculadora-grilla > button{
+    border-radius: 10%;
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid rgb(223, 165, 165);
+    outline: none;
+    background-color: rgba(96, 243, 120, 0.808);
+}
+
+.output{
+    border-radius: 15px;
+    grid-column:  1 / -1 ;
+    background-color: rgba(15, 13, 13, 0.877);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 22px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output .display{
+    border-radius: 10px;
+    background-color:  #7DB78E;
+    color:  #246F84;
+    font-size: 1.85rem;
+    text-align: center;
+}
+
+
+.calculadora-grilla > button:hover{
+    background-color: rgba(101, 138, 248, 0.7);
+}
+
+.calculadora-grilla .opera{
+    background-color: rgba(248, 100, 74, 0.7);
+}
+
+.calculadora-grilla .opera:hover{
+    background-color: rgba(238, 129, 238, 0.7);
+}
+
+.calculadora-grilla .igual{
+    background-color: rgba(250, 250, 50, 0.7);
+
+}
+
+.calculadora-grilla .igual:hover{
+    background-color: rgba(69, 233, 48, 0.7);
+}
+
+.calculadora-grilla .delete{
+    background-color: rgba(243, 243, 59, 0.7);
+
+}
+
+.calculadora-grilla .delete:hover{
+    background-color: rgba(241, 58, 45, 0.7);
+}
+
