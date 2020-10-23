@@ -5,7 +5,10 @@ const botonDelete = document.getElementsByName('data-delete')[0];
 var result = document.getElementById('result');
 var operActual = '' ;
 var opAnterior = '' ;
-var operacion = undefined;
+var operacion = '';
+
+
+
 
 botonNumeros.forEach(function(boton){
     boton.addEventListener('click', function(){
@@ -29,6 +32,7 @@ botonDelete.addEventListener('click', function(){
     actualizarDisplay();
 });
 
+
 function agregarNumero(num){
     operActual = operActual.toString() + num.toString();
     actualizarDisplay();
@@ -39,9 +43,10 @@ function selectOperacion(op){
     if(opAnterior !== ''){
         calcular()
     }
-    operacion = op.toString();
+    operacion = op.toString() ;
     opAnterior = operActual;
     operActual = '';
+    actualizarDisplay();
 }
 
 function calcular(){
@@ -66,16 +71,16 @@ function calcular(){
          return;
     }
     operActual = calculo;
-    operacion = undefined;
+    operacion = '';
     opAnterior = '';
 }
 
 function clear(){
     operActual = '';
     opAnterior = '';
-    operacion = undefined;
+    operacion = '';
 }
 
 function actualizarDisplay(){
-    result.value = operActual;
+    result.value =  opAnterior +  operacion + operActual;
 }
